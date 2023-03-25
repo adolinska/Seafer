@@ -1,0 +1,62 @@
+version: '3.9'
+
+services:
+
+  mariadb:
+    user: mysql:mysql
+    container_name: mariadb 
+    image: mariadb:10.6.4
+    environment:
+      MARIADB_USER: "OW"
+      MARIADB_PASSWORD: "EinZwei"
+      MARIADB_ROOT_PASSWORD: "EinZweiDrei" 
+      MYSQL_DATABASE: OW
+    networks:
+      owbackend:
+        ipv4_address: 172.28.0.19
+        aliases:
+          - mariadb
+    volumes:
+      - ./SQL/:/docker-entrypoint-initdb.d/:rw
+    restart: on-failure
+
+  phpmyadmin:
+    container_name: phpmyadmin
+    image: phpmyadmin:5
+    environment:
+      PMA_HOST: "mariadb"
+      MYSQL_ROOT_PASSWORD: "EinZweiDrei"
+    ports:
+      - '8081:80'
+    networks:
+      owbackend:
+        ipv4_address: 172.28.0.30
+        aliases:
+          - phpmyadmin
+    restart: on-failure
+    
+  owbackend:
+    container_name: OWBackend
+    build: 
+      context: ./ow
+    links:
+      - mariadb
+    networks:
+      owbackend:
+        ipv4_address: 172.28.0.22
+        aliases:
+          - restapi
+    depends_on:
+      - mariadb
+    restart: on-failure
+
+
+networks:
+  owbackend:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.28.0.0/24
+
+# vim:sw=2:ts=2:sts=2:et

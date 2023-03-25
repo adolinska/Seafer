@@ -1,0 +1,41 @@
+body{
+    margin: 0px;
+    background-color:#ffedea;
+    color: #020202;
+}
+
+nav{
+    background-color: #0088d2;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    height: 200px;
+}
+
+nav h2{
+    color: white;
+    margin: 0px;
+    width: 100px;
+    text-align: center;
+    height: 60px;
+    line-height: 60px;
+}
+
+.vCen{
+    display: flex;
+    align-items: center;
+}
+
+.hCen{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
+.table-box{
+    width: 800px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    text-align: center;
+}
