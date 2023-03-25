@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'TT fors';
+    src: url('Demo_Fonts/Fontspring-DEMO-tt_fors_regular.otf');
+}
+
+body {
+    background: #191822;
+    color: #ffffff;
+    font-family: 'TT fors';
+}
+
+#content {
+    width: min(90%, 80ch);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.two-col {
+    display: flex;
+}
+
+#logo {
+    height: 80px;
+}
