@@ -1,22 +1,102 @@
 <!DOCTYPE HTML>
 <html>
-    <head>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <div id="content">
-            <img id="logo" src="img/oceanwatch_banner_cropped.png" alt="logo">
-            <section>
-                <h1>About our website</h1>
-                <div class="two-col">
-                    <p>
-                    The mission of Oceanwatch is to develop a sea monitoring program that will help to prevent unsupervised and potentially dangerous activities in the ocean from going unnoticed.
-                    </p>
-                    <p>
-                    The core idea is to monitor ship activity by comparing data in real-time and historical timeframe and store them in special database.
-                    </p>
-                </div>
-            </section>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8" />
+    <title>SEAFER</title>
+
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <script src="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.js"></script>
+    <link href="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.css" rel="stylesheet" />
+</head>
+
+<body>
+    <nav>
+        <img id="logo" src="img/seafer_logo_trans.png" alt="logo">
+        <div class="nav-buttons">
+            <button type="button">Sign in</button>
+
+            <input list="langs" id="lang">
+            <datalist id="langs">
+                <option value="🇬🇧" selected="selected">🇬🇧</option>
+                <option value="🇵🇱">🇵🇱</option>
+            </datalist>
         </div>
-    </body>
+
+    </nav>
+    <main>
+        <section>
+            <h1>About our website</h1>
+            <div class="two-col">
+                <p>
+                    The mission of Oceanwatch is to develop a sea monitoring program that will help to prevent
+                    unsupervised and potentially dangerous activities in the ocean from going unnoticed.
+                </p>
+                <p>
+                    The core idea is to monitor ship activity by comparing data in real-time and historical timeframe
+                    and store them in special database.
+                </p>
+            </div>
+        </section>
+        <div id="map"></div>
+        <section>
+            <h1>Lorem Ipsum</h1>
+            <div class="two-col">
+                <p>
+                    The mission of Oceanwatch is to develop a sea monitoring program that will help to prevent
+                    unsupervised and potentially dangerous activities in the ocean from going unnoticed.
+                </p>
+                <p>
+                    The core idea is to monitor ship activity by comparing data in real-time and historical timeframe
+                    and store them in special database.
+                </p>
+            </div>
+        </section>
+        <section>
+            <h1>Lorem Ipsum</h1>
+            <div class="two-col">
+                <p>
+                    The mission of Oceanwatch is to develop a sea monitoring program that will help to prevent
+                    unsupervised and potentially dangerous activities in the ocean from going unnoticed.
+                </p>
+                <p>
+                    The core idea is to monitor ship activity by comparing data in real-time and historical timeframe
+                    and store them in special database.
+                </p>
+            </div>
+        </section>
+        <script>
+            var map = new maplibregl.Map({
+                container: 'map', // container id
+                style: 'https://demotiles.maplibre.org/style.json', // style URL
+                center: [0, 0], // starting position [lng, lat]
+                zoom: 1 // starting zoom
+
+            });
+            map.scrollZoom.disable();
+        </script>
+    </main>
+    <footer>
+        <div class="column">
+            <img id="logo-footer" src="img/seafer_logo_trans.png" alt="logo">
+            <a href="https://taikai.network/cassinihackathons/hackathons/defence-security/projects/clfnro3b682680001umgj59byqk/idea">
+                <img id="logo-footer-cropped" src="img/seafer_logo_cropped_trans.png" alt="logo">
+            </a>
+        </div>
+
+
+        <div class="fotter-buttons">
+            <input list="browsers" id="lang_fot">
+            <datalist id="browsers">
+                <option value="English">English</option>
+                <option value="Polish">Polish</option>
+            </datalist>
+        </div>
+
+        
+
+    </footer>
+</body>
+
 </html>
