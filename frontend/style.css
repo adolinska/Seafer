@@ -135,6 +135,9 @@ main section .two-col img {
     height: 300px;
 
     margin-left: 120px;
+    position: relative;
+    left: 240px;
+    border-radius: 6px;
 }
 
 main section .alterdettable table {
@@ -142,6 +145,8 @@ main section .alterdettable table {
     flex-grow: 1;
     width: 300px;
     margin-right: 300px;
+    position: absolute;
+    left: 240px;
 }
 
 .alterdettable>tbody>tr>td,
