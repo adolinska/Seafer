@@ -15,11 +15,12 @@ body {
 h1 {
     font-size: 3rem;
 }
-.map-container
-{
+
+.map-container {
     padding-left: 50px;
     padding-right: 50px;
 }
+
 #map {
     width: 100%;
     height: 600px;
@@ -68,12 +69,14 @@ nav .nav-buttons #lang {
     font-size: 30px;
     text-align: center;
 }
+
 footer {
     width: 100%;
     display: flex;
     padding: 15px;
     position: relative;
 }
+
 footer .fotter-buttons {
     align-items: center;
     position: absolute;
@@ -89,15 +92,20 @@ footer .fotter-buttons {
 }
 
 #logo-footer {
-    height: 40px;
+    width: 240px;
 }
 
-#logo-footer-cropped{
-    height: 60px;
-    background-color: #493598;
+.row > a {
+    width: 60px;
+}
+
+#logo-footer-cropped {
+    width: 60px;
+    background-color: #4329a6;
     border-radius: 100%;
     padding: 10px;
 }
+
 main section {
     display: flex;
     justify-content: center;
@@ -131,46 +139,67 @@ main section .two-col img {
 
 main section .alterdettable table {
     text-align: center;
-    flex-grow: 1;   
+    flex-grow: 1;
     width: 300px;
     margin-right: 300px;
 }
 
-.alterdettable>tbody>tr>td, .alterdettable>tbody>tr>th, .alterdettable>tfoot>tr>td, .alterdettable>tfoot>tr>th, .alterdettable>thead>tr>td, .alterdettable>thead>tr>th {
+.alterdettable>tbody>tr>td,
+.alterdettable>tbody>tr>th,
+.alterdettable>tfoot>tr>td,
+.alterdettable>tfoot>tr>th,
+.alterdettable>thead>tr>td,
+.alterdettable>thead>tr>th {
     padding: 12px;
 }
+
 main section .two-col p:first-child {
     border-right: #ffffff 2px solid;
 }
 
-.column{
+.column {
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 30px;
 }
-.column a{
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+}
+
+.row a {
     display: flex;
     justify-content: center;
 }
 
-#lang_fot{
+.column a {
+    display: flex;
+    justify-content: center;
+}
+
+#lang_fot {
     width: 200px;
     height: 40px;
     margin-right: 15px;
 }
 
-.table-container{
+.table-container {
 
     padding-left: 50px;
     padding-right: 50px;
     width: 900px;
     margin: auto;
 }
-table{
+
+table {
     text-align: center;
 }
 
-.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+.table-hover tbody tr:hover td,
+.table-hover tbody tr:hover th {
     background-color: #aee3f2 !important;
-  }
+}
