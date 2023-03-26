@@ -9,6 +9,13 @@
     <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
     <script src="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.js"></script>
     <link href="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.css" rel="stylesheet" />
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -39,39 +46,118 @@
                 </p>
             </div>
         </section>
-        <div id="map"></div>
-        <section>
-            <h1>Lorem Ipsum</h1>
-            <div class="two-col">
-                <p>
-                    The mission of Oceanwatch is to develop a sea monitoring program that will help to prevent
-                    unsupervised and potentially dangerous activities in the ocean from going unnoticed.
-                </p>
-                <p>
-                    The core idea is to monitor ship activity by comparing data in real-time and historical timeframe
-                    and store them in special database.
-                </p>
-            </div>
+        <section class="map-container">
+            <div id="map"></div>
+        </section>
+
+        <section class="table-container">
+            <h1>Urgent Alerts</h1>
+            <table class="table table-hover table-light">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Type</th>
+                        <th scope="col">Handle</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row" style="position:relative;">
+                            <span style="position:absolute; left: 22px;">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        Morbi23
+                                    </label>
+                                </div>
+                            </span>
+                        </th>
+                        <td>sapien</td>
+                        <td>magna</td>
+                        <td>pretium</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" style="position:relative;">
+                            <span style="position:absolute; left: 22px;">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        malesuada
+                                    </label>
+                                </div>
+                            </span>
+                        </th>
+                        <td>Interdum</td>
+                        <td>Suspendisse</td>
+                        <td>malesuada</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" style="position:relative;">
+                            <span style="position:absolute; left: 22px;">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        Curabitur
+                                    </label>
+                                </div>
+                            </span>
+                        </th>
+                        <td>Vivamus</td>
+                        <td>commodo</td>
+                        <td>tristique</td>    
+                    </tr>
+                </tbody>
+            </table>
         </section>
         <section>
-            <h1>Lorem Ipsum</h1>
-            <div class="two-col">
-                <p>
-                    The mission of Oceanwatch is to develop a sea monitoring program that will help to prevent
-                    unsupervised and potentially dangerous activities in the ocean from going unnoticed.
-                </p>
-                <p>
-                    The core idea is to monitor ship activity by comparing data in real-time and historical timeframe
-                    and store them in special database.
-                </p>
+            <h1>Alert Details</h1>
+            <div class="two-col alterdettable">
+                <table class="table table-hover table-light">
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Type</th>
+                            <th scope="col">Handle</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row" style="position:relative;">
+                                Lorem
+                            </th>
+                            <td>sapien</td>
+                            <td>magna</td>
+                            <td>pretium</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" style="position:relative;">
+                                malesuada
+                            </th>
+                            <td>Interdum</td>
+                            <td>Suspendisse</td>
+                            <td>malesuada</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" style="position:relative;">
+                                Curabitur
+                            </th>
+                            <td>Vivamus</td>
+                            <td>commodo</td>
+                            <td>tristique</td>    
+                        </tr>
+                    </tbody>
+                </table>
+                <img src="./img/sea.png" alt="sea">
             </div>
         </section>
         <script>
             var map = new maplibregl.Map({
                 container: 'map', // container id
                 style: 'https://demotiles.maplibre.org/style.json', // style URL
-                center: [0, 0], // starting position [lng, lat]
-                zoom: 1 // starting zoom
+                center: [18.6463700, 54.3520500], // starting position [lng, lat]
+                zoom: 5 // starting zoom
 
             });
             map.scrollZoom.disable();
@@ -80,7 +166,8 @@
     <footer>
         <div class="column">
             <img id="logo-footer" src="img/seafer_logo_trans.png" alt="logo">
-            <a href="https://taikai.network/cassinihackathons/hackathons/defence-security/projects/clfnro3b682680001umgj59byqk/idea">
+            <a
+                href="https://taikai.network/cassinihackathons/hackathons/defence-security/projects/clfnro3b682680001umgj59byqk/idea">
                 <img id="logo-footer-cropped" src="img/seafer_logo_cropped_trans.png" alt="logo">
             </a>
         </div>
@@ -94,7 +181,7 @@
             </datalist>
         </div>
 
-        
+
 
     </footer>
 </body>
